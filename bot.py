@@ -1,10 +1,16 @@
 import discord
+import datetime
 from discord.ext import commands
+from discord import app_commands
+from datetime import timedelta
 from dotenv import load_dotenv
 import json
 import os
 import re
 
+load_dotenv()
+
+TOKEN = os.getenv("TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
